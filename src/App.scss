@@ -1,0 +1,9 @@
+@import "./assets/scss/theme.scss";
+
+.test {
+  color: map-get($map: $primary, $key: "dark3");
+  font-size: map-get($map: $font, $key: 16);
+  background: $white;
+  box-shadow: 1px 2px 10px map-get($gray, "normal");
+  margin: $spacing;
+}
