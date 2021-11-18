@@ -29,7 +29,7 @@ $primary: (
   "dark10": #0e292a,
   "dark11": #0a1f1f,
   "dark12": #071515,
-  "dark13": #000000
+  "dark13": #000000,
 );
 
 // https://coolors.co/7f7f7f
@@ -68,19 +68,19 @@ $gray: (
 $white: #ffffff;
 $black: #000000;
 
-
+//
 // FONT SIZES ---------------------------------------------------
 
 $font: (
   14: 14px,
-  16: 16px
+  16: 16px,
 );
 
-
+//
 // SPACES FOR MARGIN / PADDING ----------------------------------
 
 /*
- * Try to use multiples of spaces. Like
+ * Try to use multiples of spacing. Like
  * 2 * $spacing
  * 4 * $spacing
  * $spacing / 2
@@ -88,3 +88,54 @@ $font: (
  */
 // If there is a need for any other space value, then it should be discussed first
 $spacing: 16px;
+
+//
+// BREAKPOINTS
+
+/*
+ * - xl sizes are larger than 1200
+ * - lg sizes are larger than 992 
+ * and so on ....
+ *
+ * Laptops usually lie above xl (above 1200)
+ * Smaller laptops may be from lg to xl (b/w 992 to 1200)
+ * Tablets are usually sm to lg size (b/w 576 to 992)
+ * Mobiles in portrait mode are usually less than sm, (between 576 and 320)
+ * Mobiles in landscape mode are usually between sm and md (between 576 and 768)
+ */
+$breakpoints: (
+  "xl": 1200px,
+  "lg": 992px,
+  "md": 768px,
+  "sm": 576px,
+);
+
+$widths: (
+  "sm": 500px,
+  "md": 700px,
+  "lg": 900px,
+  "xl": 1100px,
+);
+
+.container {
+  width: calc(100% - 2 * #{$spacing});
+  padding-left: $spacing;
+  padding-right: $spacing;
+  margin: 0 auto;
+
+  @media (min-width: map-get($map: $breakpoints, $key: "sm")) and (max-width: map-get($map: $breakpoints, $key: "md")) {
+    width: map-get($map: $widths, $key: "sm");
+  }
+
+  @media (min-width: map-get($map: $breakpoints, $key: "md")) and (max-width: map-get($map: $breakpoints, $key: "lg")) {
+    width: map-get($map: $widths, $key: "md");
+  }
+
+  @media (min-width: map-get($map: $breakpoints, $key: "lg")) and (max-width: map-get($map: $breakpoints, $key: "xl")) {
+    width: map-get($map: $widths, $key: "lg");
+  }
+
+  @media (min-width: map-get($map: $breakpoints, $key: "xl")) {
+    width: map-get($map: $widths, $key: "xl");
+  }
+}
