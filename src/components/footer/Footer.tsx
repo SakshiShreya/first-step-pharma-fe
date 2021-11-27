@@ -1,6 +1,7 @@
 import { faAddressCard, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as React from "react";
+import axios from "../../utils/axios";
 import styles from "./Footer.module.scss";
 
 interface FooterProps {}
@@ -11,24 +12,35 @@ interface IAddress {
 }
 
 const Footer: React.FunctionComponent<FooterProps> = () => {
-  const phone = "+91 9876543210";
-  const address: Array<IAddress> = [
-    { id: 0, value: "sdfg sdfgh asdf" },
-    { id: 1, value: "wert ertgh erty" },
-    { id: 2, value: "asdfgh" },
-  ];
+  const [phone, setPhone] = React.useState<string>();
+  const [address, setAddress] = React.useState<Array<IAddress>>([]);
 
-  return (
+  React.useEffect(() => {
+    axios.get("/v1/aboutme?fields=phone,address").then(
+      ({
+        data: {
+          data: { aboutMe },
+        },
+      }) => {
+        setPhone(aboutMe.phone);
+        setAddress(
+          aboutMe.address.map((value: string, id: number) => ({ id, value })),
+        );
+      },
+    );
+  }, []);
+
+  return phone || address.length ? (
     <div className={styles.footer}>
       <div className={`${styles.cont} container`}>
         <h2 className={styles.h2}>Contact:</h2>
         {phone && (
           <p className={styles.contact}>
             <FontAwesomeIcon icon={faPhone} className={styles.icon} />
-            +91 9876543210
+            {phone}
           </p>
         )}
-        {address && (
+        {!!address.length && (
           <div className={`${styles.address} ${styles.contact}`}>
             <FontAwesomeIcon icon={faAddressCard} className={styles.icon} />
             <div>
@@ -45,6 +57,8 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
         )}
       </div>
     </div>
+  ) : (
+    <></>
   );
 };
 
