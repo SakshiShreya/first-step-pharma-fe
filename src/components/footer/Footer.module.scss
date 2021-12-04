@@ -1,4 +1,4 @@
-@import "../../assets/scss/theme.scss";
+@import "../../assets/scss/partials/theme";
 
 .footer {
   background: map-get($map: $gray, $key: "dark9");
@@ -48,5 +48,9 @@ $icon-right-margin: $spacing;
 
   p {
     margin: 0;
+  }
+
+  .margin_btm {
+    margin-bottom: 2px;
   }
 }
