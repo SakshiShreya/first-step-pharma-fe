@@ -1,8 +1,10 @@
 import { faAddressCard, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as React from "react";
+import { IAboutMe } from "../../types/apiResponses";
+import { IResponse } from "../../types/genericTypes";
 import axios from "../../utils/axios";
-import Loader from "../generic/loader/loader";
+import Loader from "../generic/loader/Loader";
 import styles from "./Footer.module.scss";
 
 interface FooterProps {}
@@ -12,23 +14,23 @@ interface IAddress {
   value: string;
 }
 
+type TContact = IResponse<Pick<IAboutMe, "phone" | "address">>;
+
 const Footer: React.FunctionComponent<FooterProps> = () => {
   const [phone, setPhone] = React.useState<string>();
   const [address, setAddress] = React.useState<Array<IAddress>>([]);
 
   React.useEffect(() => {
-    axios.get("/v1/aboutme?fields=phone,address").then(
-      ({
-        data: {
-          data: { aboutMe },
-        },
-      }) => {
-        setPhone(aboutMe.phone);
+    axios
+      .get<TContact>("/v1/aboutme?fields=phone,address")
+      .then(({ data: { data } }) => {
+        setPhone(data.phone);
         setAddress(
-          aboutMe.address.map((value: string, id: number) => ({ id, value })),
+          data.address
+            ? data.address.map((value: string, id: number) => ({ id, value }))
+            : [],
         );
-      },
-    );
+      });
   }, []);
 
   return (

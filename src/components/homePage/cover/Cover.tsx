@@ -1,11 +1,10 @@
-// import axios from "axios";
 import * as React from "react";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
-import styles from "./HomePage.module.scss";
+import styles from "./Cover.module.scss";
 
-interface HomePageProps {}
+interface CoverProps {}
 
-const HomePage: React.FunctionComponent<HomePageProps> = () => {
+const Cover: React.FunctionComponent<CoverProps> = () => {
   const dimensions = useWindowDimensions();
   const desktopStyle = {
     backgroundImage: `url("${process.env.PUBLIC_URL}/images/placeholder-1024.png")`,
@@ -32,4 +31,4 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
   );
 };
 
-export default HomePage;
+export default Cover;

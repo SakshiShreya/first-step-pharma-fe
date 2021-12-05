@@ -5,3 +5,7 @@ export interface IDimensions {
   height: number;
   device: TDevice;
 }
+
+export interface IResponse<T> {
+  data: T
+}
