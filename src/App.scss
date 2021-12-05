@@ -1,13 +1,5 @@
 @import "./assets/scss/partials/theme";
 
-.test {
-  color: map-get($map: $primary, $key: "dark3");
-  font-size: map-get($map: $font, $key: 16);
-  background: $white;
-  box-shadow: 1px 2px 10px map-get($gray, "normal");
-  margin: $spacing;
-}
-
 html,
 body,
 div,
@@ -91,6 +83,7 @@ button {
 
 body {
   line-height: 1;
+  margin-top: 3 * $spacing;
 }
 
 article,
@@ -160,6 +153,10 @@ select {
   vertical-align: middle;
 }
 
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -171,13 +168,42 @@ h6,
 .h3,
 .h4,
 .h5,
-.h6 {
+.h6,
+.roboto-slab {
   font-family: "Roboto Slab", serif;
+}
+
+h1,
+.h1 {
+  font-size: map-get($map: $font, $key: 32);
 }
 
 h2,
 .h2 {
   font-size: map-get($map: $font, $key: 24);
+}
+
+.container {
+  width: 100%;
+  padding-left: $spacing;
+  padding-right: $spacing;
+  margin: 0 auto;
+
+  @media (min-width: map-get($map: $breakpoints, $key: "sm")) and (max-width: map-get($map: $breakpoints, $key: "md")) {
+    width: map-get($map: $widths, $key: "sm");
+  }
+
+  @media (min-width: map-get($map: $breakpoints, $key: "md")) and (max-width: map-get($map: $breakpoints, $key: "lg")) {
+    width: map-get($map: $widths, $key: "md");
+  }
+
+  @media (min-width: map-get($map: $breakpoints, $key: "lg")) and (max-width: map-get($map: $breakpoints, $key: "xl")) {
+    width: map-get($map: $widths, $key: "lg");
+  }
+
+  @media (min-width: map-get($map: $breakpoints, $key: "xl")) {
+    width: map-get($map: $widths, $key: "xl");
+  }
 }
 
 @media (min-width: map-get($map: $breakpoints, $key: "md")) {

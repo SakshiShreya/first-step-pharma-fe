@@ -75,8 +75,11 @@ $font: (
   12: 12px,
   14: 14px,
   16: 16px,
+  18: 18px,
   24: 24px,
   28: 28px,
+  32: 32px,
+  64: 64px,
 );
 
 //
@@ -119,26 +122,3 @@ $widths: (
   "lg": 900px,
   "xl": 1100px,
 );
-
-.container {
-  width: calc(100% - 2 * #{$spacing});
-  padding-left: $spacing;
-  padding-right: $spacing;
-  margin: 0 auto;
-
-  @media (min-width: map-get($map: $breakpoints, $key: "sm")) and (max-width: map-get($map: $breakpoints, $key: "md")) {
-    width: map-get($map: $widths, $key: "sm");
-  }
-
-  @media (min-width: map-get($map: $breakpoints, $key: "md")) and (max-width: map-get($map: $breakpoints, $key: "lg")) {
-    width: map-get($map: $widths, $key: "md");
-  }
-
-  @media (min-width: map-get($map: $breakpoints, $key: "lg")) and (max-width: map-get($map: $breakpoints, $key: "xl")) {
-    width: map-get($map: $widths, $key: "lg");
-  }
-
-  @media (min-width: map-get($map: $breakpoints, $key: "xl")) {
-    width: map-get($map: $widths, $key: "xl");
-  }
-}
