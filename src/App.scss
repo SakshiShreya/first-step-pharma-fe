@@ -1,4 +1,4 @@
-@import "./assets/scss/theme.scss";
+@import "./assets/scss/partials/theme";
 
 .test {
   color: map-get($map: $primary, $key: "dark3");
