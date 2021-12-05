@@ -1,6 +1,6 @@
 // import axios from "axios";
 import * as React from "react";
-import useWindowDimensions from "../../../hooks/useWindowDimensions";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import styles from "./HomePage.module.scss";
 
 interface HomePageProps {}

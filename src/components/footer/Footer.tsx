@@ -2,7 +2,7 @@ import { faAddressCard, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as React from "react";
 import axios from "../../utils/axios";
-import Loader from "../generic/loader/loader";
+import Loader from "../generic/loader/Loader";
 import styles from "./Footer.module.scss";
 
 interface FooterProps {}
