@@ -28,21 +28,57 @@ const Services: React.FunctionComponent<ServicesProps> = () => {
   }, []);
 
   return (
-    <div className={`${styles.cont} container`}>
-      {loading ? (
-        <>
-          <div className={styles.loading}>
-            <Loader width="calc(50% - 10px)" height={100} />
-            <span className={styles.spacer} />
-            <Loader width="calc(50% - 10px)" height={100} />
-          </div>
-          <div className={styles.loading}>
-            <Loader width="calc(50% - 10px)" height={100} />
-          </div>
-        </>
-      ) : (
-        services.map((service) => <p key={service._id}>{service.name}</p>)
-      )}
+    <div className="container">
+      <h2 className={styles.title}>Services provided by us</h2>
+
+      <div className={styles.cont}>
+        {loading ? (
+          <>
+            <div className={`${styles.card} ${styles.card_filled}`}>
+              <Loader width="100%" height={100} />
+            </div>
+            <div className={`${styles.card} ${styles.card_filled}`}>
+              <Loader width="100%" height={100} />
+            </div>
+            <div className={`${styles.card} ${styles.card_filled}`}>
+              <Loader width="100%" height={100} />
+            </div>
+            <div className={`${styles.card} ${styles.card_filled}`}>
+              <Loader width="100%" height={100} />
+            </div>
+          </>
+        ) : (
+          <>
+            {services.map((service) => (
+              <div
+                key={service._id}
+                className={`${styles.card} ${styles.card_filled}`}
+              >
+                <div className={styles.head}>
+                  <h3>{service.name}</h3>
+                </div>
+                <p className={styles.desc}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Magnam quae quibusdam laborum quasi ullam adipisci accusantium
+                  voluptas reiciendis at. Commodi officia, voluptate sit
+                  sapiente minus animi quasi necessitatibus sint ipsa.
+                </p>
+                {!!service.subServices.length && (
+                  <ul>
+                    {service.subServices.map((subService) => (
+                      <li>
+                        <span>- </span>
+                        <span>{subService.name}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+            {services.length % 2 !== 0 && <div className={styles.card} />}
+          </>
+        )}
+      </div>
     </div>
   );
 };
