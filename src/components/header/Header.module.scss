@@ -1,0 +1,94 @@
+@import "../../assets/scss/partials/theme";
+
+.header {
+  height: $spacing * 3;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  background-color: map-get($map: $primary, $key: "normal");
+}
+
+.img {
+  height: 44px;
+  padding-right: $spacing/2;
+}
+
+.title {
+  font-size: map-get($map: $font, $key: 24);
+}
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  padding: 0 $spacing/2;
+}
+
+.content {
+  height: $spacing * 3;
+  display: flex;
+  top: 0px;
+  align-items: center;
+}
+
+.listDesktop {
+  height: $spacing * 3;
+  display: flex;
+  flex-direction: horizontal;
+  top: 0px;
+  align-items: center;
+}
+
+.linkDesktop {
+  padding: 0 $spacing/2;
+  color: $white;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: map-get($map: $gray, $key: "light11");
+  text-decoration: underline;
+}
+
+.faBars {
+  font-size: map-get($map: $font, $key: 28);
+}
+
+.faBars:hover {
+  color: map-get($map: $gray, $key: "light11");
+  text-decoration: underline;
+}
+
+.open {
+  background-color: $white;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.close {
+  display: none;
+}
+
+.listMobile {
+  width: 100%;
+  margin: 50px auto;
+  position: fixed;
+  top: $spacing * 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.linkMobile {
+  color: map-get($map: $primary, $key: "normal");
+  text-decoration: none;
+  font-size: map-get($map: $font, $key: 24);
+  margin: $spacing/2 auto;
+  font-weight: 900;
+}
