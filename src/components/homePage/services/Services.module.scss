@@ -18,10 +18,14 @@
 }
 
 .card {
-  min-width: 350px;
+  min-width: 280px;
   margin: 0 ($spacing / 2) $spacing;
   flex: 1;
   overflow: hidden;
+
+  @media (min-width: map-get($map: $breakpoints, $key: "sm")) {
+    min-width: 350px;
+  }
 }
 
 .card_filled {
