@@ -1,7 +1,7 @@
 @import "../../assets/scss/partials/theme";
 
 .header {
-  height: $spacing * 3;
+  height: $headerHeight;
   width: 100%;
   position: fixed;
   top: 0px;
@@ -9,7 +9,7 @@
 }
 
 .img {
-  height: 44px;
+  height: $spacing * 3;
   padding-right: $spacing/2;
 }
 
@@ -25,14 +25,14 @@
 }
 
 .content {
-  height: $spacing * 3;
+  height: $headerHeight;
   display: flex;
   top: 0px;
   align-items: center;
 }
 
 .listDesktop {
-  height: $spacing * 3;
+  height: $headerHeight;
   display: flex;
   flex-direction: horizontal;
   top: 0px;

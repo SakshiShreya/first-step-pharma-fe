@@ -2,7 +2,7 @@ import React, { FunctionComponent, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import fsLogo from "../../assets/images/firstStepLogo.png";
+import fsLogo from "../../assets/images/firstStepLogo2.svg";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import styles from "./Header.module.scss";
 
