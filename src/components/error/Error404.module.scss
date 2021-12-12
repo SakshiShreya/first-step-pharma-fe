@@ -21,17 +21,17 @@
 .oops {
   font-weight: bold;
   font-size: map-get($map: $font, $key: 24);
-  color : map-get($map: $gray, $key: normal)
+  color: map-get($map: $gray, $key: normal);
 }
 
 .thisLink {
   font-size: map-get($map: $font, $key: 16);
-  color : map-get($map: $gray, $key: light4)
+  color: map-get($map: $gray, $key: light4);
 }
 
 .orThe {
   font-size: map-get($map: $font, $key: 14);
-  color : map-get($map: $gray, $key: dark4)
+  color: map-get($map: $gray, $key: dark4);
 }
 
 .button {
@@ -42,4 +42,8 @@
   text-decoration: none;
   margin-top: $spacing;
   border-radius: $border-radius;
+  @include z1;
+  &:hover {
+    @include z2;
+  }
 }
