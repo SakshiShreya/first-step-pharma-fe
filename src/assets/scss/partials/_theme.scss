@@ -76,6 +76,7 @@ $font: (
   14: 14px,
   16: 16px,
   18: 18px,
+  20: 20px,
   24: 24px,
   28: 28px,
   32: 32px,
@@ -150,3 +151,6 @@ $widths: (
   "lg": 900px,
   "xl": 1100px,
 );
+
+// header height
+$headerHeight: $spacing * 4;

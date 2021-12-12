@@ -1,7 +1,7 @@
 @import "../../assets/scss/partials/theme";
 
 .header {
-  height: $spacing * 3;
+  height: $headerHeight;
   width: 100%;
   position: fixed;
   top: 0px;
@@ -9,30 +9,34 @@
 }
 
 .img {
-  height: 44px;
-  padding-right: $spacing/2;
+  height: $spacing * 3;
+  padding-right: calc($spacing / 2);
 }
 
 .title {
-  font-size: map-get($map: $font, $key: 24);
+  font-size: map-get($map: $font, $key: 20);
+
+  @media (min-width: map-get($map: $breakpoints, $key: "md")) {
+    font-size: map-get($map: $font, $key: 24);
+  }
 }
 
 .cont {
   display: flex;
   justify-content: space-between;
   color: $white;
-  padding: 0 $spacing/2;
+  padding: 0 calc($spacing / 2);
 }
 
 .content {
-  height: $spacing * 3;
+  height: $headerHeight;
   display: flex;
   top: 0px;
   align-items: center;
 }
 
 .listDesktop {
-  height: $spacing * 3;
+  height: $headerHeight;
   display: flex;
   flex-direction: horizontal;
   top: 0px;
@@ -40,7 +44,7 @@
 }
 
 .linkDesktop {
-  padding: 0 $spacing/2;
+  padding: 0 calc($spacing / 2);
   color: $white;
   text-decoration: none;
 }
@@ -89,6 +93,6 @@
   color: map-get($map: $primary, $key: "normal");
   text-decoration: none;
   font-size: map-get($map: $font, $key: 24);
-  margin: $spacing/2 auto;
+  margin: calc($spacing / 2) auto;
   font-weight: 900;
 }
