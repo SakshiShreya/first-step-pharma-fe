@@ -121,6 +121,7 @@ a {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+  color: inherit;
 }
 
 del {
@@ -181,6 +182,16 @@ h1,
 h2,
 .h2 {
   font-size: map-get($map: $font, $key: 24);
+}
+
+.buttonPrimary {
+  text-decoration: none;
+  color: $white;
+  @include z1;
+  &:hover {
+    text-decoration: underline;
+    @include z1;
+  }
 }
 
 .container {

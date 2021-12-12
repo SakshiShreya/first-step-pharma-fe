@@ -35,6 +35,10 @@
   align-items: center;
 }
 
+.link{
+  text-decoration: none;
+}
+
 .listDesktop {
   height: $headerHeight;
   display: flex;
@@ -47,11 +51,9 @@
   padding: 0 calc($spacing / 2);
   color: $white;
   text-decoration: none;
-}
-
-.link:hover {
-  color: map-get($map: $gray, $key: "light11");
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .faBars {
