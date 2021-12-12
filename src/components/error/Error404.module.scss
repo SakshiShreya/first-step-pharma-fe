@@ -1,0 +1,45 @@
+@import "../../assets/scss/partials/theme";
+
+.cont {
+  min-height: calc(100vh - 48px - 214px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: $spacing * 6;
+  * {
+    margin: $spacing/3;
+  }
+}
+
+.h1 {
+  font-weight: bold;
+  font-size: map-get($map: $font, $key: 64);
+}
+
+.oops {
+  font-weight: bold;
+  font-size: map-get($map: $font, $key: 24);
+  color : map-get($map: $gray, $key: normal)
+}
+
+.thisLink {
+  font-size: map-get($map: $font, $key: 16);
+  color : map-get($map: $gray, $key: light4)
+}
+
+.orThe {
+  font-size: map-get($map: $font, $key: 14);
+  color : map-get($map: $gray, $key: dark4)
+}
+
+.button {
+  padding: $spacing/2 $spacing;
+  display: inline-block;
+  color: $white;
+  background-color: map-get($map: $primary, $key: "normal");
+  text-decoration: none;
+  margin-top: $spacing;
+  border-radius: $border-radius;
+}
