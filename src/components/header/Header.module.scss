@@ -10,18 +10,22 @@
 
 .img {
   height: $spacing * 3;
-  padding-right: $spacing/2;
+  padding-right: calc($spacing / 2);
 }
 
 .title {
-  font-size: map-get($map: $font, $key: 24);
+  font-size: map-get($map: $font, $key: 20);
+
+  @media (min-width: map-get($map: $breakpoints, $key: "md")) {
+    font-size: map-get($map: $font, $key: 24);
+  }
 }
 
 .cont {
   display: flex;
   justify-content: space-between;
   color: $white;
-  padding: 0 $spacing/2;
+  padding: 0 calc($spacing / 2);
 }
 
 .content {
@@ -40,7 +44,7 @@
 }
 
 .linkDesktop {
-  padding: 0 $spacing/2;
+  padding: 0 calc($spacing / 2);
   color: $white;
   text-decoration: none;
 }
@@ -89,6 +93,6 @@
   color: map-get($map: $primary, $key: "normal");
   text-decoration: none;
   font-size: map-get($map: $font, $key: 24);
-  margin: $spacing/2 auto;
+  margin: calc($spacing / 2) auto;
   font-weight: 900;
 }
