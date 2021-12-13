@@ -33,14 +33,23 @@ const Header: FunctionComponent<HeaderProps> = () => {
   const linkType = isOpen ? styles.linkMobile : styles.linkDesktop;
 
   const navList = nav.map((ctrl) => (
-    <Link className={linkType} key={ctrl.label} to={ctrl.url}>
+    <Link
+      className={linkType}
+      key={ctrl.label}
+      to={ctrl.url}
+      onClick={() => setIsOpen(false)}
+    >
       {ctrl.label}
     </Link>
   ));
 
   const sideBarStyles = isOpen ? styles.open : styles.close;
   const navigation = (
-    <nav className={isOpen ? styles.listMobile : styles.listDesktop}>
+    <nav
+      className={
+        dimensions.device !== "desktop" ? styles.listMobile : styles.listDesktop
+      }
+    >
       {navList}
     </nav>
   );
