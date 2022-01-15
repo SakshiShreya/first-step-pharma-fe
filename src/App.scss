@@ -171,7 +171,7 @@ h6,
 .h5,
 .h6,
 .roboto-slab {
-  font-family: "Roboto Slab", serif;
+  font-family: "Libre Franklin", serif;
 }
 
 h1,
@@ -182,6 +182,28 @@ h1,
 h2,
 .h2 {
   font-size: map-get($map: $font, $key: 24);
+
+  @media (min-width: map-get($map: $breakpoints, $key: "md")) {
+    font-size: map-get($map: $font, $key: 28);
+  }
+}
+
+h3,
+.h3 {
+  font-size: map-get($map: $font, $key: 20);
+
+  @media (min-width: map-get($map: $breakpoints, $key: "md")) {
+    font-size: map-get($map: $font, $key: 24);
+  }
+}
+
+h4,
+.h4 {
+  font-size: map-get($map: $font, $key: 16);
+
+  @media (min-width: map-get($map: $breakpoints, $key: "md")) {
+    font-size: map-get($map: $font, $key: 18);
+  }
 }
 
 .buttonPrimary {
@@ -196,9 +218,10 @@ h2,
 
 .container {
   width: 100%;
-  padding-left: $spacing;
-  padding-right: $spacing;
-  margin: 0 auto;
+  padding-left: map-get($spacing, 16);
+  padding-right: map-get($spacing, 16);
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: map-get($map: $breakpoints, $key: "sm")) and (max-width: map-get($map: $breakpoints, $key: "md")) {
     width: map-get($map: $widths, $key: "sm");
@@ -214,12 +237,5 @@ h2,
 
   @media (min-width: map-get($map: $breakpoints, $key: "xl")) {
     width: map-get($map: $widths, $key: "xl");
-  }
-}
-
-@media (min-width: map-get($map: $breakpoints, $key: "md")) {
-  h2,
-  .h2 {
-    font-size: map-get($map: $font, $key: 28);
   }
 }

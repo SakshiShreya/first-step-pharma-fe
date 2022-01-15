@@ -55,7 +55,7 @@ const Services: React.FunctionComponent<ServicesProps> = () => {
                 className={`${styles.card} ${styles.card_filled}`}
               >
                 <div className={styles.head}>
-                  <h3>{service.name}</h3>
+                  <h3 className="h4">{service.name}</h3>
                 </div>
                 <p className={styles.desc}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.

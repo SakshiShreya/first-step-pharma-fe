@@ -6,8 +6,8 @@
 }
 
 .cont {
-  padding-top: 2 * $spacing;
-  padding-bottom: 4 * $spacing;
+  padding-top: map-get($spacing, 32);
+  padding-bottom: 2 * map-get($spacing, 32);
 }
 
 .h2 {
@@ -30,7 +30,7 @@
 }
 
 $icon-width: 1.125em;
-$icon-right-margin: $spacing;
+$icon-right-margin: map-get($spacing, 16);
 
 .icon {
   // Max of all icon widths
