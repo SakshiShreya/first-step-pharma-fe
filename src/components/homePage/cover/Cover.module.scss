@@ -10,11 +10,8 @@
 .image {
   height: 230px;
   text-align: center;
-
-  img {
-    max-height: 100%;
-    max-width: 100%;
-  }
+  background-size: cover;
+  background-position: center;
 }
 
 .text {
