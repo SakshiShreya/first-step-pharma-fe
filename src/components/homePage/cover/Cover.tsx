@@ -7,7 +7,12 @@ interface CoverProps {}
 const Cover: React.FunctionComponent<CoverProps> = () => {
   const dimensions = useWindowDimensions();
   const desktopStyle = {
-    backgroundImage: `url("${process.env.PUBLIC_URL}/images/placeholder-1024.png")`,
+    backgroundImage: `url("${process.env.PUBLIC_URL}/images/pills-${
+      dimensions.width < 2000 ? "small" : "big"
+    }.jpg")`,
+  };
+  const mobileStyle = {
+    backgroundImage: `url("${process.env.PUBLIC_URL}/images/pills.jpg")`,
   };
 
   return (
@@ -16,12 +21,7 @@ const Cover: React.FunctionComponent<CoverProps> = () => {
       style={dimensions.device === "desktop" ? desktopStyle : {}}
     >
       {dimensions.device !== "desktop" && (
-        <div className={styles.image}>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/placeholder-1024.png`}
-            alt=""
-          />
-        </div>
+        <div className={styles.image} style={mobileStyle} />
       )}
       <div className={`${styles.text} container`}>
         <h1 className={styles.h1}>First Step Pharma</h1>
