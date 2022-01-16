@@ -94,7 +94,14 @@ $font: (
  * $spacing / 4
  */
 // If there is a need for any other space value, then it should be discussed first
-$spacing: 16px;
+$spacing: (
+  4: 4px,
+  8: 8px,
+  10: 10px,
+  16: 16px,
+  20: 20px,
+  32: 32px,
+);
 
 //
 // BORDER-RADIUS
@@ -153,4 +160,4 @@ $widths: (
 );
 
 // header height
-$headerHeight: $spacing * 4;
+$headerHeight: map-get($spacing, 32) * 2;

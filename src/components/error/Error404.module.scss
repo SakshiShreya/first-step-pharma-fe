@@ -7,9 +7,9 @@
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  padding: $spacing * 6;
+  padding: map-get($spacing, 16) * 6;
   * {
-    margin: calc($spacing / 3);
+    margin: calc(map-get($spacing, 16) / 3);
   }
 }
 
@@ -35,12 +35,12 @@
 }
 
 .button {
-  padding: calc($spacing / 2) $spacing;
+  padding: map-get($spacing, 8) map-get($spacing, 16);
   display: inline-block;
   color: $white;
   background-color: map-get($map: $primary, $key: "normal");
   text-decoration: none;
-  margin-top: $spacing;
+  margin-top: map-get($spacing, 16);
   border-radius: $border-radius;
   @include z1;
   &:hover {

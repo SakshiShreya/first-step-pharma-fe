@@ -9,8 +9,8 @@
 }
 
 .img {
-  height: $spacing * 3;
-  padding-right: calc($spacing / 2);
+  height: map-get($spacing, 16) * 3;
+  padding-right: map-get($spacing, 8);
 }
 
 .title {
@@ -25,7 +25,7 @@
   display: flex;
   justify-content: space-between;
   color: $white;
-  padding: 0 calc($spacing / 2);
+  padding: 0 map-get($spacing, 8);
 }
 
 .content {
@@ -48,7 +48,7 @@
 }
 
 .linkDesktop {
-  padding: 0 calc($spacing / 2);
+  padding: 0 map-get($spacing, 8);
   color: $white;
   text-decoration: none;
   &:hover {
@@ -83,7 +83,7 @@
   width: 100%;
   margin: 50px auto;
   position: fixed;
-  top: $spacing * 3;
+  top: map-get($spacing, 16) * 3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,6 +95,6 @@
   color: map-get($map: $primary, $key: "normal");
   text-decoration: none;
   font-size: map-get($map: $font, $key: 24);
-  margin: calc($spacing / 2) auto;
+  margin: map-get($spacing, 8) auto;
   font-weight: 900;
 }

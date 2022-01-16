@@ -15,8 +15,8 @@
 }
 
 .text {
-  margin-top: $spacing;
-  padding-bottom: $spacing;
+  margin-top: map-get($spacing, 16);
+  padding-bottom: map-get($spacing, 16);
 
   @media (min-width: map-get($map: $breakpoints, $key: "lg")) {
     padding-top: 100px;
@@ -26,11 +26,11 @@
 
 .h1 {
   color: map-get($map: $primary, $key: "dark4");
-  margin-bottom: calc($spacing / 2);
+  margin-bottom: map-get($spacing, 8);
 
   @media (min-width: map-get($map: $breakpoints, $key: "lg")) {
     font-size: map-get($map: $font, $key: 64);
-    margin-bottom: $spacing;
+    margin-bottom: map-get($spacing, 16);
   }
 }
 
