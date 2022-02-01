@@ -5,7 +5,7 @@ interface AboutProps {}
 
 const About: FunctionComponent<AboutProps> = () => (
   <div className={`${styles.cont} container`}>
-    <h1 className={styles.h1}>About</h1>
+    <h1 className={styles.h1}>About Us</h1>
     <p>
       A Self –confident, passionately curious, Lean Six Sigma Green and Black
       Belt Certified, Pharmaceutical Professional with 19 years of experience in
@@ -32,8 +32,8 @@ const About: FunctionComponent<AboutProps> = () => (
       Regulatory Audit Faced:- USFDA-05, EUGMP-04, MCC, WHO 05, ANVISA - 03 and
       NHL customer audit every year
     </p>
-    <h1 className={styles.h1}>Achivements</h1>
-    <h4 className={styles.h4}>Achivements As Freelancer</h4>
+    <h2 className={styles.h1}>Achivements</h2>
+    <h3 className={styles.h3}>Achivements As Freelancer</h3>
     <ul className={styles.ul}>
       <li>
         Helped in Designing and approval of the Factory Lay out of a green field
@@ -63,7 +63,7 @@ const About: FunctionComponent<AboutProps> = () => (
         Company
       </li>
     </ul>
-    <h4 className={styles.h4}>Achivements As Industry Professional</h4>
+    <h3 className={styles.h3}>Achivements As Industry Professional</h3>
     <ul className={styles.ul}>
       <li>
         In one of my organizations in noticeably short tenure brought the
