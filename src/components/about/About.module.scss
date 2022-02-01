@@ -1,0 +1,24 @@
+@import "../../assets/scss/partials/theme";
+
+.cont {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  p{
+    padding-left: 30px;
+  }
+}
+
+.h1 {
+  font-size: 24px;
+  color: map-get($map: $primary, $key: normal);
+  margin: 10px 0;
+}
+.h4 {
+  font-size: 18px;
+  color: map-get($map: $primary, $key: normal);
+  margin: 10px 0;
+}
+
+.ul{
+  padding: 0 10px 0 30px ;
+}
