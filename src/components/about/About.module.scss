@@ -1,0 +1,31 @@
+@import "../../assets/scss/partials/theme";
+
+.cont {
+  padding-top: map-get($map: $spacing, $key: 20);
+  padding-bottom: map-get($map: $spacing, $key: 20);
+  p{
+    padding-left: map-get($map: $spacing, $key: 32);
+    padding-bottom: map-get($map: $spacing, $key: 8);
+    line-height: 24px;
+  }
+}
+
+.h1 {
+  font-size: map-get($map: $font, $key: 24);
+  color: map-get($map: $primary, $key: normal);
+  margin: map-get($map: $spacing, $key: 10) 0;
+}
+.h4 {
+  font-size: map-get($map: $font, $key: 18);
+  color: map-get($map: $primary, $key: normal);
+  margin: map-get($map: $spacing, $key: 10) 0;
+}
+
+.ul{
+  padding: 0 10px 0 30px ;
+  li{
+    padding-bottom: map-get($map: $spacing, $key: 8);
+    line-height: 24px;
+  }
+  
+}
