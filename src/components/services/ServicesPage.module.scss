@@ -1,0 +1,14 @@
+@import "../../assets/scss/partials/theme";
+
+.process_management {
+  width: 100%;
+
+  @media (min-width: map-get($map: $breakpoints, $key: "md")) {
+    float: left;
+    width: 50%;
+  }
+}
+
+.clear {
+  clear: left;
+}
