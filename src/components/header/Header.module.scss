@@ -14,10 +14,10 @@
 }
 
 .title {
-  font-size: map-get($map: $font, $key: 20);
+  @include fs-lh(20);
 
   @media (min-width: map-get($map: $breakpoints, $key: "md")) {
-    font-size: map-get($map: $font, $key: 24);
+    @include fs-lh(24);
   }
 }
 
@@ -94,7 +94,7 @@
 .linkMobile {
   color: map-get($map: $primary, $key: "normal");
   text-decoration: none;
-  font-size: map-get($map: $font, $key: 24);
+  @include fs-lh(24);
   margin: map-get($spacing, 8) auto;
   font-weight: 900;
 }
