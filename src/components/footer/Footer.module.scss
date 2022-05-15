@@ -11,20 +11,20 @@
 }
 
 .h2 {
-  font-size: map-get($map: $font, $key: 24);
+  @include fs-lh(24);
   margin: 0;
 
   @media (min-width: map-get($map: $breakpoints, $key: "md")) {
-    font-size: map-get($map: $font, $key: 28);
+    @include fs-lh(28);
   }
 }
 
 .contact {
-  font-size: map-get($map: $font, $key: 12);
+  @include fs-lh(12);
   margin: map-get($font, 12) 0;
 
   @media (min-width: map-get($map: $breakpoints, $key: "md")) {
-    font-size: map-get($map: $font, $key: 14);
+    @include fs-lh(14);
     margin: map-get($font, 14) 0;
   }
 }

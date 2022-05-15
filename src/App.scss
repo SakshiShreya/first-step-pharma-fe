@@ -77,7 +77,6 @@ button {
   vertical-align: baseline;
   background: transparent;
   font-family: "Roboto", sans-serif;
-  line-height: 1.15;
   box-sizing: border-box;
 }
 
@@ -176,33 +175,33 @@ h6,
 
 h1,
 .h1 {
-  font-size: map-get($map: $font, $key: 32);
+  @include fs-lh(32);
 }
 
 h2,
 .h2 {
-  font-size: map-get($map: $font, $key: 24);
+  @include fs-lh(24);
 
   @media (min-width: map-get($map: $breakpoints, $key: "md")) {
-    font-size: map-get($map: $font, $key: 28);
+    @include fs-lh(28);
   }
 }
 
 h3,
 .h3 {
-  font-size: map-get($map: $font, $key: 20);
+  @include fs-lh(20);
 
   @media (min-width: map-get($map: $breakpoints, $key: "md")) {
-    font-size: map-get($map: $font, $key: 24);
+    @include fs-lh(24);
   }
 }
 
 h4,
 .h4 {
-  font-size: map-get($map: $font, $key: 16);
+  @include fs-lh(16);
 
   @media (min-width: map-get($map: $breakpoints, $key: "md")) {
-    font-size: map-get($map: $font, $key: 18);
+    @include fs-lh(18);
   }
 }
 
