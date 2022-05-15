@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // COLOURS --------------------------------------
 
 // https://coolors.co/309293
@@ -82,6 +84,17 @@ $font: (
   32: 32px,
   64: 64px,
 );
+
+// This mixin will calculate line-height based on the font-size
+// and then convert line-height to integer value so that UI doesn't break on some devices
+// Default line-height is 1.15
+// If you want to change line-height, then pass a different value
+// And if you already have a line-height in px value, then don't use this function (let the code be readable) 
+@mixin fs-lh($size, $lh: 1.15) {
+  $font-size: map-get($map: $font, $key: $size);
+  font-size: $font-size;
+  line-height: math.floor($font-size * $lh);
+}
 
 //
 // SPACES FOR MARGIN / PADDING ----------------------------------
