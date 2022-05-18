@@ -1,11 +1,10 @@
-@import "../../assets/scss/partials/theme";
+@import "partials/theme";
 
 .cont {
   padding-top: map-get($map: $spacing, $key: 20);
   padding-bottom: map-get($map: $spacing, $key: 20);
 
   p{
-    padding-left: map-get($map: $spacing, $key: 32);
     padding-bottom: map-get($map: $spacing, $key: 8);
     line-height: 24px;
   }

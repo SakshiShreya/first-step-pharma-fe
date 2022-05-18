@@ -69,6 +69,7 @@ $gray: (
 
 $white: #ffffff;
 $black: #000000;
+$link: map-get($map: $primary, $key: "normal");
 
 //
 // FONT SIZES ---------------------------------------------------

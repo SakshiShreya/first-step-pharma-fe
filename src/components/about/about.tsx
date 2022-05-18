@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from "react";
-import styles from "./About.module.scss";
+import styles from "../../assets/scss/Article.module.scss";
 
 interface AboutProps {}
 
 const About: FunctionComponent<AboutProps> = () => (
   <div className={`${styles.cont} container`}>
-    <h1 className={styles.h1}>About Us</h1>
+    <h1 className={styles.h1}>ABOUT US</h1>
     <p>
       A Self –confident, passionately curious, Lean Six Sigma Green and Black
       Belt Certified, Pharmaceutical Professional with 19 years of experience in

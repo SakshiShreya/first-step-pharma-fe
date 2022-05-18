@@ -1,4 +1,7 @@
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as React from "react";
+import { Link } from "react-router-dom";
 import { IService } from "../../../types/apiResponses";
 import { IResponse } from "../../../types/genericTypes";
 import axios from "../../../utils/axios";
@@ -29,7 +32,15 @@ const Services: React.FunctionComponent<ServicesProps> = () => {
 
   return (
     <div className="container">
-      <h2 className={styles.title}>Services provided by us</h2>
+      <h2 className={styles.title}>
+        <Link to="/services" className={styles.link}>
+          Services provided by us
+          <FontAwesomeIcon
+            icon={faExternalLinkAlt}
+            className={styles.link_icon}
+          />
+        </Link>
+      </h2>
 
       <div className={styles.cont}>
         {loading ? (

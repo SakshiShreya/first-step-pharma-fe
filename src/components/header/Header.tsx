@@ -26,8 +26,8 @@ const Header: FunctionComponent<HeaderProps> = () => {
       url: "/about",
     },
     {
-      label: "Contact Us",
-      url: "/contactus",
+      label: "Services",
+      url: "/services",
     },
   ];
   const linkType = isOpen ? styles.linkMobile : styles.linkDesktop;
