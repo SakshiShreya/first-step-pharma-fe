@@ -38,7 +38,7 @@ const ServicesPage: FunctionComponent<ServicesPageProps> = () => (
     </h2>
 
     <img
-      src="/images/services/product-lifecycle.png"
+      src="images/services/product-lifecycle.png"
       alt="Product Lifecycle"
       className={styles.process_management}
     />
