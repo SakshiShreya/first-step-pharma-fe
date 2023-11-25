@@ -24,7 +24,7 @@ const Cover: React.FunctionComponent<CoverProps> = () => {
         <div className={styles.image} style={mobileStyle} />
       )}
       <div className={`${styles.text} container`}>
-        <h1 className={styles.h1}>First Step Pharma</h1>
+        <h1 className={styles.h1}>First Step Pharma Solutions</h1>
         <h2 className={`${styles.h2} roboto`}>Pharmaceutical Consultancy</h2>
       </div>
     </div>

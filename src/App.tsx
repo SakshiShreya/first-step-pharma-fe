@@ -1,4 +1,4 @@
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import React from "react";
 import Footer from "./components/footer/Footer";
 import Routes from "./routes";
@@ -8,11 +8,11 @@ import "./App.scss";
 interface AppProps {}
 
 const App: React.FunctionComponent<AppProps> = () => (
-  <HashRouter>
+  <BrowserRouter>
     <Header />
     <Routes />
     <Footer />
-  </HashRouter>
+  </BrowserRouter>
 );
 
 export default App;

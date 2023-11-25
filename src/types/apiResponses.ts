@@ -6,12 +6,11 @@ export interface IAboutMe {
 
 interface ISubService {
   name: string;
-  order: number;
+  id: number;
 }
 
 export interface IService {
-  _id: string;
+  id: number;
   name: string;
   subServices: Array<ISubService>;
-  order: number;
 }

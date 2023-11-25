@@ -1,9 +1,6 @@
 import { faAddressCard, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as React from "react";
-import { IAboutMe } from "../../types/apiResponses";
-import { IResponse } from "../../types/genericTypes";
-import axios from "../../utils/axios";
 import Loader from "../generic/loader/Loader";
 import styles from "./Footer.module.scss";
 
@@ -14,24 +11,12 @@ interface IAddress {
   value: string;
 }
 
-type TContact = IResponse<Pick<IAboutMe, "phone" | "address">>;
-
 const Footer: React.FunctionComponent<FooterProps> = () => {
-  const [phone, setPhone] = React.useState<string>();
-  const [address, setAddress] = React.useState<Array<IAddress>>([]);
-
-  React.useEffect(() => {
-    axios
-      .get<TContact>("/v1/aboutme?fields=phone,address")
-      .then(({ data: { data } }) => {
-        setPhone(data.phone);
-        setAddress(
-          data.address
-            ? data.address.map((value: string, id: number) => ({ id, value }))
-            : [],
-        );
-      });
-  }, []);
+  const phone = "0987654321";
+  const address: Array<IAddress> = [
+    { id: 0, value: "ABC DEF" },
+    { id: 1, value: " GHI JKL" },
+  ];
 
   return (
     <div className={styles.footer}>

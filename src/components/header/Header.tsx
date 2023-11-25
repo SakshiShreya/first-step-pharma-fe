@@ -60,7 +60,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
         <div className={styles.content}>
           <img className={styles.img} src={fsLogo} alt="" />
           <Link className={styles.link} to="/">
-            <h2 className={styles.title}>First Step Pharma</h2>
+            <h2 className={styles.title}>First Step Pharma Solutions</h2>
           </Link>
         </div>
         {dimensions.device === "desktop" ? (
@@ -81,7 +81,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
             <div className={`${styles.cont} container`}>
               <div className={styles.content}>
                 <img className={styles.img} src={fsLogo} alt="" />
-                <h2 className={styles.title}>First Step Pharma</h2>
+                <h2 className={styles.title}>First Step Pharma Solutions</h2>
               </div>
               <FontAwesomeIcon
                 onClick={() => {
