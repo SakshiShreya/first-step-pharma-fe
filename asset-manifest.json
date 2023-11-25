@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "./static/css/main.5acb0920.css",
-    "main.js": "./static/js/main.a25e7462.js",
-    "static/js/27.c5ec289c.chunk.js": "./static/js/27.c5ec289c.chunk.js",
-    "static/media/firstStepLogo2.svg": "./static/media/firstStepLogo2.c2ebcd26a9d2f01af91fd0260ba94a99.svg",
-    "index.html": "./index.html"
+    "main.css": "/first-step-pharma-fe/static/css/main.5acb0920.css",
+    "main.js": "/first-step-pharma-fe/static/js/main.147735ee.js",
+    "static/js/27.c5ec289c.chunk.js": "/first-step-pharma-fe/static/js/27.c5ec289c.chunk.js",
+    "static/media/firstStepLogo2.svg": "/first-step-pharma-fe/static/media/firstStepLogo2.c2ebcd26a9d2f01af91fd0260ba94a99.svg",
+    "index.html": "/first-step-pharma-fe/index.html"
   },
   "entrypoints": [
     "static/css/main.5acb0920.css",
-    "static/js/main.a25e7462.js"
+    "static/js/main.147735ee.js"
   ]
 }
